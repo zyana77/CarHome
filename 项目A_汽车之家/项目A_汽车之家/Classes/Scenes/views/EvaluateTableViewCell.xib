@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="109" id="KGk-i7-Jjw" customClass="EvaluateTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ehy-uc-ClS">
+                        <rect key="frame" x="5" y="5" width="150" height="110"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ehy-uc-ClS" secondAttribute="height" multiplier="15:11" id="h9b-hb-ZgX"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T12-Be-h77">
+                        <rect key="frame" x="170" y="5" width="225" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ut2-b9-nfm">
+                        <rect key="frame" x="170" y="98" width="28" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="评论" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMI-8A-22O">
+                        <rect key="frame" x="334" y="98" width="28" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="T12-Be-h77" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.6" id="5Eo-sr-1uP"/>
+                    <constraint firstItem="ehy-uc-ClS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-3" id="8db-Zm-mY0"/>
+                    <constraint firstItem="T12-Be-h77" firstAttribute="leading" secondItem="ehy-uc-ClS" secondAttribute="trailing" constant="15" id="ETp-S8-kl5"/>
+                    <constraint firstItem="ut2-b9-nfm" firstAttribute="leading" secondItem="ehy-uc-ClS" secondAttribute="trailing" constant="15" id="OIO-Sx-zfK"/>
+                    <constraint firstItem="ehy-uc-ClS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-3" id="WYh-Xh-bu5"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ehy-uc-ClS" secondAttribute="bottom" constant="-3.5" id="YUD-1B-VFX"/>
+                    <constraint firstItem="ut2-b9-nfm" firstAttribute="bottom" secondItem="ehy-uc-ClS" secondAttribute="bottom" id="ZgI-11-yCl"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="UMI-8A-22O" secondAttribute="trailing" constant="5" id="gVA-2b-rmY"/>
+                    <constraint firstItem="UMI-8A-22O" firstAttribute="bottom" secondItem="ut2-b9-nfm" secondAttribute="bottom" id="goD-ZT-tLe"/>
+                    <constraint firstItem="T12-Be-h77" firstAttribute="top" secondItem="ehy-uc-ClS" secondAttribute="top" id="mGW-GY-4ng"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imgView" destination="ehy-uc-ClS" id="sJ7-wn-f2f"/>
+                <outlet property="replyLabel" destination="UMI-8A-22O" id="kLq-nU-V7N"/>
+                <outlet property="timeLabel" destination="ut2-b9-nfm" id="sc1-tz-5XA"/>
+                <outlet property="titleLabel" destination="T12-Be-h77" id="dvt-B6-eNt"/>
+            </connections>
+            <point key="canvasLocation" x="374.5" y="385"/>
+        </tableViewCell>
+    </objects>
+</document>
